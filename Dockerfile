@@ -6,7 +6,7 @@ ENV REDIS_VERSION 2.8.17
 ENV REDIS_TARBALL_SHA1 913479f9d2a283bfaadd1444e17e7bab560e5d1e
 
 RUN apt-get -q update && \
-  DEBIAN_FRONTEND=noninteractive apt-get -qy install \
+  DEBIAN_FRONTEND=noninteractive apt-get -qy --no-install-recommends install \
     build-essential \
     curl && \
   curl -O http://download.redis.io/releases/redis-$REDIS_VERSION.tar.gz && \
