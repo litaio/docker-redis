@@ -8,16 +8,24 @@ The container provides a very minimal Redis configuration by default. It simply 
 
 ## Usage
 
-Run with default configuration:
+For default settings, run:
 
 ``` bash
-docker run litaio/redis
+docker run --name redis litaio/redis
 ```
 
-Run with a custom configuration file, assuming `/etc/redis` is a directory containing a `redis.conf`:
+This will require that other containers that need to access redis do so using Docker's linking feature. Use the `-p` or `-P` flags if you need to expose Redis on a host port.
+
+It's recommended to run the container with a host volume for persistent data storage:
 
 ``` bash
-docker run -v /etc/redis:/redis litaio/redis /usr/local/bin/redis-server /redis/redis.conf
+docker run -v /path/to/redis/data:/var/lib/redis litaio/redis
+```
+
+To run with a custom configuration file:
+
+``` bash
+docker run -v /etc/redis.conf:/redis.conf litaio/redis /usr/local/bin/redis-server /redis.conf
 ```
 
 ## License
