@@ -2,8 +2,8 @@ FROM debian:7.7
 MAINTAINER Jimmy Cuadra <jimmy@jimmycuadra.com>
 
 ENV REDIS_MAJOR_MINOR_VERSION 2.8
-ENV REDIS_VERSION 2.8.17
-ENV REDIS_TARBALL_SHA1 913479f9d2a283bfaadd1444e17e7bab560e5d1e
+ENV REDIS_VERSION 2.8.19
+ENV REDIS_TARBALL_SHA1 3e362f4770ac2fdbdce58a5aa951c1967e0facc8
 
 RUN apt-get -q update && \
   DEBIAN_FRONTEND=noninteractive apt-get -qy --no-install-recommends install \
