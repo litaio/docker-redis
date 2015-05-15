@@ -4,10 +4,9 @@ This repository contains the Dockerfile for Lita.io's public Redis image: [litai
 
 ## Configuration
 
-The default Redis configuration is the standard example configuration with two minor changes:
+The default Redis configuration is the default configuration with one minor changes:
 
 * The data directory is set to /var/lib/redis.
-* The max memory policy is set to "noeviction" mode to prevent keys from being automatically removed when memory is full.
 
 You can provide your own custom configuration by mounting a volume with another file. The details of this are shown below.
 

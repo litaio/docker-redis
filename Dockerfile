@@ -1,9 +1,9 @@
-FROM debian:7.7
+FROM debian:jessie
 MAINTAINER Jimmy Cuadra <jimmy@jimmycuadra.com>
 
-ENV REDIS_MAJOR_MINOR_VERSION 2.8
-ENV REDIS_VERSION 2.8.19
-ENV REDIS_TARBALL_SHA1 3e362f4770ac2fdbdce58a5aa951c1967e0facc8
+ENV REDIS_MAJOR_MINOR_VERSION 3.0
+ENV REDIS_VERSION 3.0.1
+ENV REDIS_TARBALL_SHA1 fe1d06599042bfe6a0e738542f302ce9533dde88
 
 RUN apt-get -q update && \
   DEBIAN_FRONTEND=noninteractive apt-get -qy --no-install-recommends install \
